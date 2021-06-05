@@ -76,6 +76,15 @@ export default class Board extends Component {
                     );
                 })}
             </div>
+            <button onClick={() => {
+                const g = getInitialBoard();
+                this.setState({
+                    grid: g,
+                    turn: 1,
+                    status: 0,
+                    count: 0
+                });
+            }}>Restart</button>
         </>);
     }
 }
